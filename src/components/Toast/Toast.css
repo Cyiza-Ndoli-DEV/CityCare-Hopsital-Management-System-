@@ -1,0 +1,58 @@
+/* This is the container that will be positioned on the main page */
+.toast-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+  min-width: 350px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.toast-container.success {
+  background-color: #28a745; /* Green */
+}
+
+.toast-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.toast-message {
+  flex-grow: 1;
+  margin: 0;
+  font-weight: 500;
+}
+
+.toast-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.toast-close-btn:hover {
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

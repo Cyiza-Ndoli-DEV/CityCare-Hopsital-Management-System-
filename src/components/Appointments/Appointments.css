@@ -1,0 +1,158 @@
+/* --- APPOINTMENT STATS CARD --- */
+.appointment-stats-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.stat-item {
+  border-bottom: 1px solid #f1f3f5;
+  padding-bottom: 1rem;
+}
+.stat-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.stat-label {
+  margin: 0 0 0.5rem 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+.stat-value {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.stat-value.primary { color: #212529; }
+.stat-value.secondary { color: #495057; }
+.stat-value.tertiary { color: #6c757d; }
+
+/* --- APPOINTMENT REQUEST CARD --- */
+.request-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+.requests-list > .request-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.request-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.request-info { flex-grow: 1; }
+.request-info h4, .request-info p { margin: 0; font-size: 0.9rem; }
+.request-info h4 { font-weight: 600; color: #212529; }
+.request-info p { color: #6c757d; line-height: 1.4; }
+.request-time { font-size: 0.85rem; color: #6c757d; font-weight: 500; }
+.request-actions { display: flex; gap: 0.5rem; margin-left: 1rem; }
+.btn-accept, .btn-reject {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-accept { background-color: #e7f3ff; color: #0d6efd; }
+.btn-reject { background-color: #fff0f1; color: #dc3545; }
+.btn-accept:hover, .btn-reject:hover { opacity: 0.8; }
+
+/* --- TIMELINE ITEM STYLES --- */
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+}
+.timeline-time {
+  flex-basis: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  padding-top: 0.5rem;
+}
+.timeline-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.75rem;
+}
+.timeline-line {
+  flex-grow: 1;
+  width: 2px;
+  background-color: #e9ecef;
+}
+.timeline-list > .timeline-item:last-child .timeline-line {
+  background-color: transparent;
+}
+.timeline-content {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.timeline-content h4 { margin: 0 0 0.25rem 0; font-size: 1rem; color: #212529; }
+.timeline-content p { margin: 0; color: #6c757d; font-size: 0.9rem; }
+.timeline-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+/* NEW: Styling for the "View Details" button */
+.btn-view-details {
+  background: none;
+  border: none;
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+}
+.btn-view-details:hover {
+  text-decoration: underline;
+}
+/* --- NEW STYLES for request card statuses --- */
+.request-card.status-accepted,
+.request-card.status-rejected {
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.request-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.request-status.accepted {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+.request-status.rejected {
+  color: #721c24;
+  background-color: #f8d7da;
+}

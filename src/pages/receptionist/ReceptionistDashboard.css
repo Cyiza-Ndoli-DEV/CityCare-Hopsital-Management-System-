@@ -1,0 +1,246 @@
+/* src/pages/receptionist/ReceptionistDashboard.css */
+
+.receptionist-dashboard {
+  padding: 1.5rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* White background for the header bar */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff; /* Your primary dark blue */
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-patient-btn {
+  background-color: #2c3e50; /* Dark blue button */
+  color: #ffffff;
+}
+
+.add-patient-btn:hover {
+  background-color: #3b5978; /* Slightly lighter blue on hover */
+}
+
+.view-patients-btn {
+  background-color: #eaf2fa; /* Light blue background */
+  color: #2c3e50;
+}
+
+.view-patients-btn:hover {
+  background-color: #dfe9f5; /* Slightly darker on hover */
+}
+
+.receptionist-dashboard-page {
+  padding: 1.5rem; /* Padding for the entire page content */
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* White background for the header bar */
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50; /* Primary dark blue from our design system */
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem; /* Slightly smaller font size from your design */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-patient-btn {
+  background-color: #3b5978; /* The dark button color */
+  color: #ffffff;
+}
+
+.add-patient-btn:hover {
+  background-color: #2c5784; /* A slightly different dark blue on hover */
+}
+
+.view-patients-btn {
+  background-color: #f4f6f9; /* The very light grey background */
+  color: #2c3e50;
+  border: 1px solid #e0e0e0;
+}
+
+.view-patients-btn:hover {
+  background-color: #dfe9f5; /* A light blue hover state */
+}
+
+.arrivals-table-container {
+  margin-top: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+}
+
+.table-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Makes the table responsive */
+}
+
+.arrivals-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.arrivals-table thead tr {
+  background-color: #f4f6f9; /* Light grey header from design */
+}
+
+.arrivals-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #5c677d; /* Secondary text color */
+}
+
+.arrivals-table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.arrivals-table tbody tr:nth-child(even) {
+  background-color: #eaf2fa80; /* Light blue for every even row */
+}
+
+.arrivals-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.time-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+.patient-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.patient-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.patient-info .patient-name {
+  display: block;
+  font-weight: 600;
+}
+.patient-info .patient-id {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.status-tag {
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.status-checkedin {
+  background-color: #dfe9f5;
+  color: #2c5784;
+}
+.status-paid {
+  background-color: #dcfce7;
+  color: #22c55e;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+  color: #5c677d;
+}
+
+.action-icon {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.action-icon:hover {
+  color: #2c5784;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: #5c677d;
+  font-weight: 600;
+}
+
+.page-number, .page-arrow {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.page-number.active {
+  background-color: #2c5784;
+  color: #ffffff;
+}
+ 

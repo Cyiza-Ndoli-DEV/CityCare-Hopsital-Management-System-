@@ -1,0 +1,76 @@
+addmodal.record-detail-content {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  background-color: #f8f9fa; /* Light background */
+  min-width: 650px;
+}
+
+.record-detail-header {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.record-detail-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #343a40;
+}
+
+.record-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-value {
+  font-size: 1rem;
+  color: #212529;
+  font-weight: 500;
+}
+
+.detail-section {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #0d6efd; /* Blue accent */
+}
+
+.detail-section h4 {
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #343a40;
+}
+
+.detail-section p {
+  margin: 0;
+  color: #495057;
+  line-height: 1.6;
+}

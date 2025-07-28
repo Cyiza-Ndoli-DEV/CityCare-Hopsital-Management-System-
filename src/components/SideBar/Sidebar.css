@@ -1,0 +1,82 @@
+/* src/components/Sidebar/Sidebar.css */
+.sidebar {
+  width: 250px;
+  background-color: #f4f6f9;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+  border-right: 1px solid var(--border-color);
+  display: flex; /* Add these two lines */
+  flex-direction: column; 
+}
+
+.sidebar-nav {
+    padding: 0 1rem;
+}
+
+.sidebar-nav h3 {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--text-secondary); /* Lighter text for inactive links */
+    border-radius: 8px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid transparent; /* Placeholder for active border */
+    transition: all 0.2s;
+}
+
+.nav-icon {
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    background-color: var(--sidebar-active-bg);
+    color: var(--text-active);
+}
+
+.nav-link.active {
+    background-color: var(--sidebar-active-bg);
+    color: var(--text-active);
+    font-weight: 700;
+    border-left: 3px solid var(--text-active);
+}
+
+/* Add this to the end of Sidebar.css */
+.sidebar-section-header {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* ADD THIS to the end of Sidebar.css */
+.sidebar-footer {
+  margin-top: auto; /* This pushes the logout button to the bottom */
+}
+
+.logout-link {
+  color: #e74c3c !important; /* Make it red for emphasis */
+  font-weight: 700;
+}
+
+.logout-link:hover {
+  background-color: #fdedec !important; /* A light red hover effect */
+}

@@ -1,0 +1,51 @@
+.pharmacist-sidebar {
+  width: 250px;
+  background-color: #f8fafc;
+  height: 100vh;
+  border-right: 1px solid #e2e8f0;
+  padding: 1rem 0;
+}
+
+.sidebar-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.sidebar-header h3 {
+  color: #2c5784;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #edf2f7;
+  color: #2c5784;
+}
+
+.menu-item.active {
+  background-color: #e2e8f0;
+  color: #2c5784;
+  font-weight: 500;
+  border-left: 3px solid #2c5784;
+}
+
+.menu-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}

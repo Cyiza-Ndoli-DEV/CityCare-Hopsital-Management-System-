@@ -1,0 +1,26 @@
+/* src/App.css */
+body {
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  padding-top: 70px; /* Offset for fixed navbar */
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 1rem;
+}
+.app-container.pharmacist-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+/* We must also override the margin on the main-content for the pharmacist page */
+.app-container.pharmacist-layout .main-content {
+  margin-left: 0; /* Remove the margin, as the grid handles the spacing */
+  overflow-y: auto; /* Ensure proper scrolling for the pharmacist page */
+  height: calc(100vh - 70px);
+}

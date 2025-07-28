@@ -1,0 +1,198 @@
+.patient-records-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.page-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.controls-container {
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.patient-table-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; /* For responsiveness on small screens */
+}
+
+.patient-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patient-table th, .patient-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.patient-table th {
+    font-weight: 600;
+    color: #555;
+    background-color: #f7f7f7;
+}
+
+.patient-table tr:last-child td {
+    border-bottom: none;
+}
+
+.patient-table tr:hover {
+    background-color: #f2f8ff;
+}
+
+.no-data-cell {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+    font-style: italic;
+}
+
+.action-button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.view-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.view-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the Patient Detail Modal - leveraging some generic modal classes */
+.patient-detail-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.patient-detail-modal .modal-body p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.patient-detail-modal .modal-body strong {
+    color: #333;
+    margin-right: 0.5rem;
+}
+/* ADD THIS CSS to AdminPatientRecords.css */
+
+/* Style for clickable rows */
+.clickable-row {
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background-color: #f2f8ff; /* Same as existing hover */
+}
+
+/* Wrapper for the action buttons to align them */
+.action-buttons-wrapper {
+    display: flex;
+    gap: 0.5rem; /* Space between buttons */
+    align-items: center;
+}
+
+/* Base style for the new icon buttons */
+.action-icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 8px; /* Rounded corners like the screenshot */
+    cursor: pointer;
+    font-size: 1.1rem; /* Icon size */
+    color: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-icon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Edit button - yellow/orange */
+.edit-button {
+    background-color: #f39c12; /* A nice orange */
+}
+
+.edit-button:hover {
+    background-color: #e67e22;
+}
+
+/* Delete button - red */
+.delete-button {
+    background-color: #e74c3c; /* A nice red */
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Simple styles for the Edit Modal Form */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.form-actions button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+}
+.button-save {
+    background-color: #007bff;
+    color: white;
+}

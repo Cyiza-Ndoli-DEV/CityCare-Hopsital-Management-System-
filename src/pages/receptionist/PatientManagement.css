@@ -1,0 +1,292 @@
+/* Main Page Container */
+.patient-management-page {
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Page Header Section */
+.page-header {
+  background-color: #3b5978;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Action Buttons */
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button.add-patient-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.action-button.add-patient-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.action-button.secondary-btn {
+  background-color: #ffffff;
+  color: #0f465a;
+  border: 1px solid #e2e8f0;
+}
+
+.action-button.secondary-btn:hover {
+  background-color: #f1f5f9;
+}
+
+/* Patient Type Toggle */
+.patient-type-toggle {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7f8c8d;
+  cursor: pointer;
+}
+
+.toggle-label.active {
+  color: #2c5784;
+}
+
+.toggle-label input {
+  accent-color: #2c5784;
+}
+
+/* Table Container */
+.table-container-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.patient-count {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c5784;
+}
+
+.search-and-filter {
+  display: flex;
+  gap: 1rem;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px 40px 10px 15px;
+  width: 300px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+}
+
+.status-filter {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #2c5784;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Table Styles */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table thead tr {
+  background-color: #f4f6f9;
+}
+
+.patients-table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: #5c677d;
+  font-size: 0.9rem;
+}
+
+.patients-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.patients-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.patient-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.patient-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #4a90e2;
+}
+
+.patient-info .patient-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.patient-info .patient-id {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Row States */
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clickable-row:hover {
+  background-color: #eaf2fa !important;
+}
+
+.non-clickable-row {
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.non-clickable-row .patient-avatar {
+  filter: grayscale(100%);
+}
+
+/* Status Pills */
+.status-pill {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-paid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Action Buttons in Table */
+.table-action-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.table-action-button:hover {
+  background-color: #1d4ed8;
+}
+
+.actions-cell.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .search-and-filter {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+}

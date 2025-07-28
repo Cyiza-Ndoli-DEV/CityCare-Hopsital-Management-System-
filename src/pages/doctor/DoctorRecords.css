@@ -1,0 +1,124 @@
+.records-page-container {
+  background: #fafdff;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.top-bar label {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.top-bar input[type="text"] {
+  flex: 1;
+  border: 1.1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 15px;
+  background: #fafdff;
+}
+
+.records-table-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(226, 226, 226, 0.5);
+  overflow: hidden;
+}
+
+table.records-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+
+.records-table th, .records-table td {
+  text-align: left;
+  padding: 16px 12px;
+}
+
+.records-table th {
+  background: #f2f7fc;
+  font-weight: 700;
+  border-bottom: 1.5px solid #c3d6ed;
+}
+
+.records-table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  transition: background 0.13s;
+  cursor: pointer;
+}
+
+.records-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.records-table tbody tr:hover {
+  background: #e3f1fe;
+}
+
+.no-records-row {
+  text-align: center;
+  color: #888;
+  padding: 2.5rem 0;
+}
+
+.record-actions button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.record-actions .delete-btn { background: #e53935; color: #fff; }
+.record-actions .edit-btn { background: #ffb300; color: #222; }
+
+/* --- Modal Styles --- */
+.modal-bg {
+  position: fixed; z-index: 1000; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center;
+   padding: 1rem 1.5rem 1.5rem 1.5rem;min-width: 650px;
+}
+.modal-dialog {
+  background: #fff; padding: 2rem; border-radius: 14px; min-width: 500px; max-width: 550px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); animation: show-dialog .2s ease-out;
+}
+@keyframes show-dialog {
+  from { transform: scale(.96) translateY(20px); opacity: 0; }
+  to   { transform: scale(1)   translateY(0);    opacity: 1; }
+}
+.modal-dialog h3 {
+  margin-top: 0; font-size: 1.5rem; color: #1976d2; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 1rem; margin-bottom: 1rem;
+}
+.modal-actions {
+  text-align: right; margin-top: 1.5rem;
+}
+.modal-actions button {
+  padding: 10px 24px; border-radius: 5px; font-weight: 600; border: none; cursor: pointer;
+}
+.modal-actions .cancel-btn { background: #eee; color: #444; }
+
+.detail-row {
+  margin-bottom: 1rem; font-size: 15px;
+}
+.detail-label {
+  font-weight: 600; color: #1976d2; margin-right: 4px;
+}
+.detail-summary, .detail-notes {
+  background: #f7fafd; border-radius: 7px; padding: 12px; margin-top: 5px; line-height: 1.6;
+}

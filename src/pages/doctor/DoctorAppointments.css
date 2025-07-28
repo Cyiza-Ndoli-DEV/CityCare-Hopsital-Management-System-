@@ -1,0 +1,148 @@
+.appointments-page {
+  padding: 2rem;
+  background-color: #F4F7FE;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.main-column, .sidebar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+/* --- ADD APPOINTMENT BANNER --- */
+.add-appointment-banner {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.banner-content h2 { font-size: 1.75rem; color: #212529; margin: 0 0 1rem 0; }
+.btn-add-appointment {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-add-appointment:hover { background-color: #0b5ed7; }
+.banner-illustration img { max-height: 100px; }
+
+/* --- CALENDAR CARD --- */
+.calendar-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* NEW: Styles for the date selector container */
+.date-selectors {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.month-selector, .year-selector {
+  border: 1px solid #e9ecef;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  background-color: #fff;
+  font-family: inherit; /* Ensures consistent font */
+  font-size: 0.9rem;
+}
+
+/* --- HORIZONTAL CALENDAR --- */
+.horizontal-calendar {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.horizontal-calendar::-webkit-scrollbar { display: none; }
+.calendar-day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  min-width: 60px;
+  cursor: pointer;
+}
+.calendar-day-name { font-size: 0.8rem; color: #6c757d; font-weight: 600; }
+.calendar-date-number {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+  position: relative;
+}
+.active-date { background-color: #0d6efd; color: white; }
+.appointment-count-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* --- TIMELINE SECTION --- */
+.timeline-section h3 {
+  font-size: 1.25rem;
+  color: #212529;
+  margin: 0 0 1rem 0;
+}
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- APPOINTMENT REQUESTS CARD --- */
+.requests-list-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.card-header h3 { margin: 0; font-size: 1.25rem; color: #212529; }
+.view-all-link { color: #0d6efd; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+.requests-list { display: flex; flex-direction: column; }

@@ -1,0 +1,476 @@
+/* src/pages/receptionist/PatientProfile.css */
+.patient-profile-page {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.profile-header-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-summary {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.profile-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f4f8;
+}
+
+.profile-info-main h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.patient-id {
+  color: #666;
+  margin: 5px 0;
+}
+
+.patient-contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.patient-contact-details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.balance-alert {
+  background: #fff3e0;
+  color: #e65100;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.balance-alert.has-balance {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.book-appointment-btn {
+  background: #2c5784;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Payment Alert */
+.floating-payment-alert {
+  background: #fff8e1;
+  border-left: 4px solid #ffa000;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.3s;
+}
+
+.floating-payment-alert div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e65100;
+  font-weight: 500;
+}
+
+.close-alert-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #e65100;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Tabs */
+.profile-nav-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-button.active {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.payment-notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #f44336;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Content */
+.profile-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Appointments */
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.appointment-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.appointment-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-pending .appointment-icon-wrapper {
+  background: #fff3e0;
+  color: #ff9800;
+}
+
+.status-confirmed .appointment-icon-wrapper {
+  background: #e8f5e9;
+  color: #4caf50;
+}
+
+.appointment-details {
+  flex: 1;
+}
+
+.appointment-details strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.appointment-details span {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Medical History */
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.record-date {
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.record-details {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.record-diagnosis, .record-treatment {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.view-details-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Lab Results */
+.results-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th, .results-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.results-table th {
+  background: #f5f5f5;
+  font-weight: 500;
+}
+
+.result-badge {
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.result-badge.normal {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.result-badge.abnormal {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.view-result-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Billing */
+.balance-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #fff3e0;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.outstanding-balance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e65100;
+  font-weight: 500;
+}
+
+.make-payment-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.billing-table {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+.billing-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.billing-table th, .billing-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.billing-table th {
+  background: #f5f5f5;
+  font-weight: 500;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge.paid {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Payment Modal */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.payment-modal .modal-content {
+  background: white;
+  width: 400px;
+  max-width: 90%;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.payment-modal h3 {
+  margin: 0 0 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.payment-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background: #2c5784;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}

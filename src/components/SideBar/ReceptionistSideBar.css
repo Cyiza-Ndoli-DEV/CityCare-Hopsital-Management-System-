@@ -1,0 +1,63 @@
+/* src/pages/receptionist/ReceptionistDashboard.css */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.header-actions { display: flex; gap: 1rem; }
+.action-button { display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.2rem; border: none; border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+.add-patient-btn { background-color: #2c3e50; color: #ffffff; }
+.view-patients-btn { background-color: #eaf2fa; color: #2c3e50; }
+
+.receptionist-stats-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.r-stat-card { background-color: #ffffff; padding: 1.25rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); display: flex; align-items: center; gap: 1rem; }
+.r-stat-icon { width: 50px; height: 50px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.r-stat-info { display: flex; align-items: baseline; gap: 0.5rem; }
+.r-stat-value { font-size: 2.25rem; font-weight: 700; }
+.r-stat-label { font-size: 0.9rem; color: #5c677d; max-width: 100px; line-height: 1.2; }
+
+.arrivals-table-container { margin-top: 1.5rem; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); padding: 1.5rem; }
+.table-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+.table-wrapper { width: 100%; overflow-x: auto; }
+.arrivals-table { width: 100%; border-collapse: collapse; }
+.arrivals-table thead tr { background-color: #f4f6f9; }
+.arrivals-table th { padding: 1rem; text-align: left; font-weight: 600; color: #5c677d; }
+.arrivals-table td { padding: 1rem; vertical-align: middle; border-bottom: 1px solid #f0f0f0; }
+.arrivals-table tbody tr:nth-child(odd) { background-color: #fbfdff; } /* Subtle alternating row color */
+.arrivals-table tbody tr:last-child td { border-bottom: none; }
+.time-cell { font-weight: 600; }
+
+.patient-cell { display: flex; align-items: center; gap: 1rem; }
+.patient-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; background-color: #4a90e2; }
+.patient-info .patient-name { font-weight: 600; }
+.patient-info .patient-id { font-size: 0.85rem; color: #7f8c8d; }
+
+.status-tag { padding: 5px 15px; border-radius: 15px; font-size: 0.9rem; font-weight: 600; }
+.status-checkedin { background-color: #dfe9f5; color: #2c5784; }
+.status-paid { background-color: #dcfce7; color: #22c55e; }
+
+.actions-cell { display: flex; gap: 1.5rem; font-size: 1.2rem; color: #5c677d; }
+.action-icon { cursor: pointer; }
+.action-icon:hover { color: #2c5784; }
+
+.pagination { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.5rem; color: #5c677d; font-weight: 600; }
+.pagination span { padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+.pagination span:first-child { background-color: #2c5784; color: #ffffff; } /* Active state */

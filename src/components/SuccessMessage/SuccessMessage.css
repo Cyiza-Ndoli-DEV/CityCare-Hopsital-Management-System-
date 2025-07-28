@@ -1,0 +1,47 @@
+.success-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-width: 450px;
+}
+
+.success-icon-wrapper {
+  color: #28a745; /* Success Green */
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-message {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+.success-ok-btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #0d6efd; /* Primary Blue */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.success-ok-btn:hover {
+  background-color: #0b5ed7;
+}

@@ -1,0 +1,77 @@
+/* src/pages/LoginPage.css */
+.login-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f6f9; /* Light grey page background */
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.login-logo-icon {
+  font-size: 3rem;
+  color: #2c5784; /* Your primary blue */
+}
+
+.login-header h1 {
+  font-size: 1.5rem;
+  color: #2c5784;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c5784;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 1rem;
+}
+
+.form-actions {
+  margin-top: 2rem;
+}
+
+.login-button {
+  background-color: #2c5784;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px; /* Rounded pill shape */
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.login-button:hover {
+  background-color: #3b5978;
+}

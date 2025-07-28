@@ -1,0 +1,50 @@
+/* src/components/PrescriptionDetailModal/PrescriptionDetailModal.css */
+
+.prescription-detail-modal .modal-bg {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 999;
+}
+.prescription-detail-modal .modal-dialog {
+  background: #fff;
+  padding: 36px 28px;
+  border-radius: 14px;
+  min-width: 340px;
+  max-width: 800px;
+  width: 95%;
+  box-shadow: 0 8px 32px #0003;
+  position: relative;
+}
+h3 {
+  margin-top: 0;
+}
+.modal-section {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.modal-actions {
+  text-align: right;
+  margin-top: 19px;
+}
+.close-btn {
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+}
+.pill {
+  display: inline-block;
+  padding: 2px 10px;
+  margin-left: 8px;
+  border-radius: 10px;
+  font-size: 0.89em;
+  background: #e0e7ff;
+  color: #3730a3;
+}
+.pill-id { background: #f3f4f6; color: #6b7280;}
+.pill-pickup { background: #bbf7d0; color: #166534;}
+.pill-allergy { background: #fee2e2; color: #991b1b;}

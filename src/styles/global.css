@@ -1,0 +1,32 @@
+/* src/styles/global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --header-blue: #245B9C;       /* The dark blue of the top navbar */
+    --sidebar-bg: #E6E6E6;       /* The light grey of the sidebar */
+    --page-bg: #e9ecef;          /* The slightly darker background for the main area */
+    --card-bg: #ffffff;          /* White for all cards */
+    --text-dark: #333333;        /* Main text color */
+    --text-secondary: #5c677d;   /* Lighter text for subtitles */
+    --text-active: #3b5978;       /* Blue text for active links */
+    --sidebar-active-bg: #eaf2fa;  /* Light blue background for active sidebar item */
+    --border-color: #e0e0e0;
+    
+    /* Stat Card Border Colors */
+    --border-blue: #3b5978;
+    --border-lime: #a2c158;
+    --border-red: #e57373;
+    --border-green: #5cb85c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--page-bg);
+}

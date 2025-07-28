@@ -1,0 +1,142 @@
+/* --- Main Page Layout --- */
+.admin-dashboard-page {
+  padding: 2rem;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+.header-title h1 {
+  font-size: inherit;
+  margin: 0;
+}
+
+/* --- Stats Grid --- */
+.stats-section {
+  margin-bottom: 2rem;
+}
+.stats-grid {
+  display: grid;
+  /* UPDATED: This will now create 4 columns on large screens, 2 on medium, and 1 on small */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- The Main White Card for Statistics --- */
+.statistics-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eef2f9;
+}
+.card-header h2 {
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin: 0;
+}
+.view-more-btn {
+  background: none; border: none; color: #a0aec0; font-weight: 500; cursor: pointer; font-size: 0.9rem; transition: color 0.2s;
+}
+.view-more-btn:hover {
+  color: #2d3748;
+}
+
+/* --- Charts Grid & Containers --- */
+.charts-grid {
+  display: grid;
+  /* UPDATED: On large screens it's 2 columns, on smaller screens it will become 1 */
+  grid-template-columns: 2fr 1.2fr;
+  gap: 2.5rem;
+}
+.chart-container h3 {
+  font-size: 1rem; font-weight: 600; color: #4a5568; margin-top: 0; margin-bottom: 1.5rem; text-align: center;
+}
+.chart-wrapper {
+  height: 350px;
+}
+
+/* This container will wrap the export button and align it correctly */
+.export-actions-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  padding-top: 1.5rem; /* Adds space above the button */
+  margin-top: 1.5rem; /* Pushes it down from the charts */
+  border-top: 1px solid #eef2f9; /* A subtle line separator */
+}
+
+/* ADD THIS NEW .export-btn style */
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #364152; /* Dark slate color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  background-color: #1a202c;
+}
+
+/* For tablets and smaller laptops */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr; /* Stack the charts vertically */
+    gap: 3rem;
+  }
+}
+
+/* For smaller tablets */
+@media (max-width: 992px) {
+  /* No need for a change here, the `auto-fit` on stats-grid already handles it */
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .admin-dashboard-page {
+    padding: 1rem;
+  }
+  .stats-grid {
+    /* Explicitly set to 2 columns on mobile if needed, but auto-fit often works well */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr; /* One column for very small screens */
+  }
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

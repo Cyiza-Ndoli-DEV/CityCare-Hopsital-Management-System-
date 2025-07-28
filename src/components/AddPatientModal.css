@@ -1,0 +1,205 @@
+/* AddPatientModal.css */
+.add-patient-modal .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-patient-modal .modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 1000px; /* Wide enough for 3 columns */
+  max-height: 90vh;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-patient-modal .modal-header {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.add-patient-modal .modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.add-patient-modal .modal-close-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #64748b;
+  line-height: 1;
+}
+
+.add-patient-modal .modal-close-button:hover {
+  color: #475569;
+}
+
+.add-patient-modal .form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.5rem;
+  gap: 1.5rem;
+}
+
+.add-patient-modal .form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.add-patient-modal .section-title {
+  color: #334155;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-patient-modal .form-group {
+  margin-bottom: 0;
+}
+
+.add-patient-modal .form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.add-patient-modal .form-group input,
+.add-patient-modal .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.add-patient-modal .form-group input:focus,
+.add-patient-modal .form-group select:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.add-patient-modal .phone-input {
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.add-patient-modal .phone-input .country-code {
+  padding: 0 0.75rem;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #475569;
+  border-right: 1px solid #e2e8f0;
+}
+
+.add-patient-modal .phone-input input {
+  flex: 1;
+  border: none;
+  padding: 0.75rem;
+}
+
+.add-patient-modal .form-footer {
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  position: sticky;
+  bottom: 0;
+}
+
+.add-patient-modal .required-hint {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.add-patient-modal .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.add-patient-modal .cancel-btn,
+.add-patient-modal .submit-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.add-patient-modal .cancel-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.add-patient-modal .cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+.add-patient-modal .submit-btn {
+  background: #2563eb;
+  border: 1px solid #1d4ed8;
+  color: white;
+}
+
+.add-patient-modal .submit-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .add-patient-modal .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .add-patient-modal .form-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .add-patient-modal .modal-header {
+    padding: 1rem;
+  }
+  
+  .add-patient-modal .form-footer {
+    padding: 1rem;
+  }
+}

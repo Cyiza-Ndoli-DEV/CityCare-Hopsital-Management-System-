@@ -1,0 +1,212 @@
+/* src/pages/doctor/MyPatients.css */
+
+.my-patients-page {
+  padding: 2rem;
+  background-color: #f8f9fa; /* Light grey background for the page */
+  height: 100%;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.patients-list-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Ensures content respects the border radius */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.card-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f1f3f5;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+.search-bar .search-icon {
+  color: #868e96;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  outline: none;
+  margin-left: 0.5rem;
+  width: 250px;
+  font-size: 0.9rem;
+}
+
+.add-patient-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #2c5784;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.add-patient-btn:hover {
+  background-color: #1f3a5a;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* Allows table to be scrolled horizontally on smaller screens */
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th, .patients-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.patients-table th {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #868e96;
+  text-transform: uppercase;
+  background-color: #f8f9fa;
+}
+
+.patients-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.patients-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.patient-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.patient-id {
+  font-size: 0.85rem;
+  color: #868e96;
+}
+
+.last-visit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #495057;
+}
+
+.calendar-icon {
+  color: #adb5bd;
+}
+
+/* --- Status Badge Styles (from your previous code, with slight tweaks) --- */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.status-inpatient {
+  background-color: #e0f2fe; /* Light Blue */
+  color: #0c4a6e;
+}
+.status-outpatient {
+  background-color: #dcfce7; /* Light Green */
+  color: #15803d;
+}
+.status-discharged {
+  background-color: #e5e7eb; /* Light Grey */
+  color: #4b5563;
+}
+
+/* --- Action Button Styles (from previous step) --- */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-icon-btn {
+  background: none;
+  border: 1px solid #dee2e6;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-icon-btn svg {
+  font-size: 14px;
+}
+
+.action-icon-btn:hover {
+  background-color: #f1f3f5;
+}
+
+.view-btn {
+  color: #3b82f6; /* Blue */
+}
+
+.delete-btn {
+  color: #ef4444; /* Red */
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: #5c677d;
+  font-weight: 600;
+}
+
+.page-number, .page-arrow {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.page-number.active {
+  background-color: #2c5784;
+  color: #ffffff;
+}
+ 
